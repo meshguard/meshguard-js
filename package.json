@@ -67,10 +67,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/dbhurley/meshguard-js.git"
+    "url": "https://github.com/meshguard/meshguard-js.git"
   },
   "homepage": "https://meshguard.app",
   "bugs": {
-    "url": "https://github.com/dbhurley/meshguard-js/issues"
+    "url": "https://github.com/meshguard/meshguard-js/issues"
   }
 }

@@ -281,7 +281,7 @@ try {
 
 ## Python SDK
 
-Looking for the Python SDK? See [meshguard-python](https://github.com/dbhurley/meshguard-python).
+Looking for the Python SDK? See [meshguard-python](https://github.com/meshguard/meshguard-python).
 
 ## Requirements
 
