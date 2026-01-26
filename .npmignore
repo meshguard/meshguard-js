@@ -1,0 +1,11 @@
+src/
+tests/
+jest.config.ts
+tsconfig.json
+tsconfig.cjs.json
+scripts/
+.github/
+.gitignore
+*.tsbuildinfo
+coverage/
+.DS_Store
