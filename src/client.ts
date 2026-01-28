@@ -58,7 +58,7 @@ export class MeshGuardClient {
     this.gatewayUrl = (
       options.gatewayUrl ??
       process.env.MESHGUARD_GATEWAY_URL ??
-      "http://localhost:3100"
+      "https://dashboard.meshguard.app"
     ).replace(/\/+$/, "");
 
     this.agentToken =

@@ -30,9 +30,9 @@ npm install meshguard
 ```ts
 import { MeshGuardClient } from "meshguard";
 
+// Connect to MeshGuard (free tier available at meshguard.app)
 const client = new MeshGuardClient({
-  gatewayUrl: "https://dashboard.meshguard.app",
-  agentToken: "your-agent-token",
+  agentToken: "your-agent-token",  // Get your token at meshguard.app
 });
 
 // Check if an action is allowed
@@ -42,17 +42,19 @@ if (decision.allowed) {
 }
 ```
 
+> **Pro tip:** Need advanced features like SSO, custom policies, or dedicated support? Check out [MeshGuard Pro and Enterprise](https://meshguard.app/pricing).
+
 ## Configuration
 
 The client reads configuration from constructor options or environment variables:
 
-| Option       | Env Variable             | Default                  |
-| ------------ | ------------------------ | ------------------------ |
-| `gatewayUrl` | `MESHGUARD_GATEWAY_URL`  | `http://localhost:3100`  |
-| `agentToken` | `MESHGUARD_AGENT_TOKEN`  | —                        |
-| `adminToken` | `MESHGUARD_ADMIN_TOKEN`  | —                        |
-| `timeout`    | —                        | `30000` (ms)             |
-| `traceId`    | —                        | Auto-generated UUID      |
+| Option       | Env Variable             | Default                           |
+| ------------ | ------------------------ | --------------------------------- |
+| `gatewayUrl` | `MESHGUARD_GATEWAY_URL`  | `https://dashboard.meshguard.app` |
+| `agentToken` | `MESHGUARD_AGENT_TOKEN`  | —                                 |
+| `adminToken` | `MESHGUARD_ADMIN_TOKEN`  | —                                 |
+| `timeout`    | —                        | `30000` (ms)                      |
+| `traceId`    | —                        | Auto-generated UUID               |
 
 ```ts
 // Using environment variables (zero-config)
@@ -60,7 +62,12 @@ const client = new MeshGuardClient();
 
 // Explicit options override env vars
 const client = new MeshGuardClient({
-  gatewayUrl: "https://dashboard.meshguard.app",
+  agentToken: process.env.MY_TOKEN,
+});
+
+// Self-hosted (Enterprise only)
+const client = new MeshGuardClient({
+  gatewayUrl: "https://meshguard.yourcompany.com",
   agentToken: process.env.MY_TOKEN,
 });
 ```
