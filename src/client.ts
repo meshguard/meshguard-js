@@ -4,6 +4,8 @@
  * Core client for interacting with the MeshGuard gateway.
  */
 
+import { randomUUID } from "node:crypto";
+
 import type {
   MeshGuardOptions,
   PolicyDecision,
@@ -66,7 +68,7 @@ export class MeshGuardClient {
     this.adminToken =
       options.adminToken ?? process.env.MESHGUARD_ADMIN_TOKEN;
     this.timeout = options.timeout ?? 30_000;
-    this.traceId = options.traceId ?? crypto.randomUUID();
+    this.traceId = options.traceId ?? randomUUID();
   }
 
   // ---------------------------------------------------------------------------
