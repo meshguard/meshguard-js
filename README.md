@@ -1,6 +1,6 @@
 # MeshGuard SDK for TypeScript / JavaScript
 
-> **Maintenance mode:** this SDK remains supported for security patches, bug fixes, and compatibility. New agent-governance features are moving to the AGT + MeshGuard adapter. New AGT-based deployments should start with `meshguard-agt` and the TypeScript adapter when published. Existing users can keep this SDK while planning migration.
+> **Ecosystem expansion:** this SDK remains a first-class MeshGuard path for TypeScript and JavaScript agents. The AGT adapters add AGT-native paths for teams that choose Microsoft Agent Governance Toolkit; they complement this SDK and the rest of the MeshGuard ecosystem.
 
 > AI agent governance — policy enforcement, audit logging, and trust management.
 
