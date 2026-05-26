@@ -37,7 +37,7 @@ afterEach(() => {
 describe("MeshGuardClient constructor", () => {
   it("uses defaults when no options are provided", () => {
     const client = new MeshGuardClient();
-    expect(client.gatewayUrl).toBe("http://localhost:3100");
+    expect(client.gatewayUrl).toBe("https://dashboard.meshguard.app");
     expect(client.traceId).toBeDefined();
   });
 
